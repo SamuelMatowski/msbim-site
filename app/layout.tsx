@@ -25,12 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* Força o favicon manualmente */}
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
-      </head>
+     <head>
+  <link rel="icon" href="/favicon.ico?v=2" type="image/png" />
+  <link rel="apple-touch-icon" href="/favicon.ico?v=2" />
+  <meta name="theme-color" content="#004C88" />
+</head>
+
       <body className={poppins.className}>{children}</body>
     </html>
   );
