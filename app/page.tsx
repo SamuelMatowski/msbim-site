@@ -15,7 +15,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section className="bg-gradient-to-r from-[#004C88] to-blue-600 text-white py-24 text-center">
         <h2 className="text-4xl md:text-5xl font-bold">SITE EM DESENVOLVIMENTO</h2>
         <h2 className="text-4xl md:text-5xl font-bold mt-6">Projetos Inteligentes em BIM</h2>
@@ -62,11 +62,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTATO */}
-      <section id="contato" className="max-w-6xl mx-auto py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold">Entre em Contato</h2>
-        <p className="mt-6 text-gray-700">📧 contato@msbim.com.br</p>
-        <p className="text-gray-700">📞 (41) 99999-9999</p>
+      {/* CONTATO (versão nova, diferente) */}
+      <section id="contato" className="bg-[#004C88]/5 py-20 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          {/* Texto */}
+          <div>
+            <h2 className="text-3xl font-bold text-[#004C88]">Entre em Contato</h2>
+            <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+              Fale com nossa equipe técnica e descubra como a <strong>MS BIM Engenharia</strong> pode otimizar seus projetos
+              com tecnologia, precisão e eficiência.
+            </p>
+            <ul className="mt-8 space-y-3 text-gray-700">
+              <li>📧 <a href="mailto:contato@msbim.com.br" className="hover:underline">contato@msbim.com.br</a></li>
+              <li>📞 <a href="tel:+5541999999999" className="hover:underline">(41) 99999-9999</a></li>
+              <li>📍 R. Dr. Manoel Pedro, 363 — Curitiba, Paraná</li>
+            </ul>
+          </div>
+
+          {/* “Formulário” visual (placeholder) */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+            <h3 className="text-xl font-semibold text-[#004C88] mb-4">Envie sua mensagem</h3>
+            <form className="space-y-4">
+              <input type="text" placeholder="Seu nome" className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#004C88]" />
+              <input type="email" placeholder="Seu e-mail" className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#004C88]" />
+              <textarea rows={4} placeholder="Sua mensagem" className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#004C88]" />
+              <button
+                type="submit"
+                className="w-full bg-[#004C88] text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition"
+              >
+                Enviar mensagem
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
 
       {/* LOCALIZAÇÃO */}
@@ -100,9 +128,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-[#004C88] text-white text-center py-6">
-        © 2025 MS BIM Engenharia — Todos os direitos reservados
+      
+      <footer className="bg-[#202225] text-gray-200">
+        <div className="max-w-6xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-4">
+          {/* Coluna 1 */}
+          <div>
+            <img src="/image.png" alt="MS BIM Engenharia" className="h-12 mb-5" />
+            <p className="text-sm text-gray-300">
+              Projetos de instalações com tecnologia BIM, precisão técnica e foco em eficiência para obras de alto padrão.
+            </p>
+            <p className="mt-6 text-xs text-gray-400">
+              © {new Date().getFullYear()} — MS BIM Engenharia — Todos os direitos reservados
+            </p>
+          </div>
+
+          {/* Coluna 2 */}
+          <div>
+            <h4 className="font-semibold text-white">Localização</h4>
+            <p className="mt-3 text-sm text-gray-300">
+              R. Dr. Manoel Pedro, 363<br />
+              Cabral — Curitiba/PR<br />
+              CEP 80035-030
+            </p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=R.%20Dr.%20Manoel%20Pedro%2C%20363%20-%20Cabral%2C%20Curitiba%20-%20PR%2C%2080035-030"
+              target="_blank"
+              className="inline-block mt-3 text-sm font-semibold text-white underline underline-offset-4 hover:opacity-90"
+            >
+              
+            </a>
+          </div>
+
+          {/* Coluna 3 */}
+          <div>
+            <h4 className="font-semibold text-white">Mapa do site</h4>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li><a href="#sobre" className="hover:opacity-90">Sobre</a></li>
+              <li><a href="#servicos" className="hover:opacity-90">Serviços</a></li>
+              <li><a href="#localizacao" className="hover:opacity-90">Localização</a></li>
+              <li><a href="#contato" className="hover:opacity-90">Contato</a></li>
+            </ul>
+          </div>
+
+          {/* Coluna 4 */}
+          <div>
+            <h4 className="font-semibold text-white">Contato</h4>
+            <a
+              href="https://wa.me/5541999999999?text=Olá%20MS%20BIM,%20gostaria%20de%20um%20orçamento."
+              target="_blank"
+              className="inline-flex items-center justify-center mt-3 mb-4 rounded-md bg-emerald-500 px-4 py-2 font-semibold text-white hover:bg-emerald-600 transition"
+            >
+              FALE CONOSCO
+            </a>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>📧 contato@msbim.com.br</li>
+              <li>📞 (41) 99999-9999</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10">
+          <div className="max-w-6xl mx-auto px-6 py-4 text-xs text-gray-400 flex flex-col md:flex-row items-center justify-between gap-2">
+            <span>MS BIM • Engenharia de Instalações</span>
+            <span>Desenvolvido com Next.js + Tailwind</span>
+          </div>
+        </div>
       </footer>
     </main>
   )
